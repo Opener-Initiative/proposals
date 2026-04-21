@@ -1,10 +1,16 @@
 ..  architecture-overview:
 
-============
+=======
 Preface
-============
+=======
 
-This document acts as an starting point to document DECT NR+ Stack. It is work in progress and first collects some ideas.
+This document acts as an starting point to document DECT NR+ Stack. 
+It is work in progress and first collects some ideas.
+
+Following proposal is intended for integration into Zephyr net-stack architecture `Network Stack Architecture
+<https://github.com/zephyrproject-rtos/zephyr/blob/v4.2-branch/doc/connectivity/networking/net-stack-architecture.rst>`_ 
+but may be also used in an Zephyr independent environment.
+
 
 ============
 Architecture
@@ -18,18 +24,18 @@ Modules
 
 *   Driver(s)
 
-    *   For each supported modem there should be a driver which abstracts the vendor specific implementation and maps it to the Radio API.
+    *   For each supported modem there should be a driver which abstracts the vendor specific implementation and maps it to the Driver API.
     *   Currently only nRF91x1 supporting nRF9151, nRF9161, nRF9131 (all have same core nRF9120).
     *   One driver selected at build time.
 *   Scheduler
 
-    *   Scheduler module does the timed interactions with the modem/driver via Radio API. 
+    *   Scheduler module does the timed interactions with the modem/driver via Driver API. 
     *   It schedules beacon (FT) and beacon-scan operations (PT, FT&PT).
     *   It schedules RX, TX and RSSI1 operations on resources on working channel / multiple channels.
     *   There may be multiple implementations for different scheduling strategies.
 *   MAC layer encoding/decoding
 
-    *   Module which does the encoding of out-going MAC layer PDUs which should be transmitted via Radio API and decoding of in-coming MAC layer PDUs received via Radio API.
+    *   Module which does the encoding of out-going MAC layer PDUs which should be transmitted via Driver API and decoding of in-coming MAC layer PDUs received via Driver API.
     *   All supported SDUs should have encoding and decoding functionality.
 *   DLC layer
 
@@ -77,14 +83,18 @@ Modules
 
     *   A common POSIX conform socket implementation to allow the user/application to communicate with the application.
 
-----------------------
-Interfaces
-----------------------
+-------------
+API Reference
+-------------
 
-*   Radio API
+^^^^^^^^^^^^^^^^^^^^^
+DECT NR+ API Overview
+^^^^^^^^^^^^^^^^^^^^^
 
-    *   The common interface between Scheduler and Radio Driver.
-    *   This interface dispatches so called Radio Operations (RX, TX, RSSI1) between SCheduler and radio.
+*   Driver API
+
+    *   The common interface between Scheduler and Driver.
+    *   This interface dispatches so called Driver Operations (RX, TX, RSSI1) between scheduler and driver.
 *   Scheduler API
 
     *   A common interface for different scheduler implementations.
@@ -106,3 +116,8 @@ Interfaces
     *   A common POSIX socket interface to allow the user/application to provide data towards the stack (tx) and receive data from remote devices (rx).    
 
 
+^^^^^^^^^^^^^^^^^^^^^^
+DECT NR+ Driver API
+^^^^^^^^^^^^^^^^^^^^^^
+
+`dectnrp-driver-api <dectnrp-driver-api.rst>`_.
