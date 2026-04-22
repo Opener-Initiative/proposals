@@ -1,0 +1,26 @@
+{
+    "image": "python:3.13-slim",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker",
+                "ms-vscode.makefile-tools",
+                "swyddfa.esbonio"
+            ],
+            "settings": {
+                "esbonio.sphinx.pythonCommand": [
+                    "python3"
+                ],
+                "esbonio.sphinx.confDir": "${workspaceFolder}/docs"
+            }
+        }
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y make && pip install -r requirements.txt",
+    "forwardPorts": [
+        8080
+    ],
+    "remoteEnv": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8"
+    }
+}

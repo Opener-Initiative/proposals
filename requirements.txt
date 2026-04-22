@@ -1,6 +1,7 @@
 # Sphinx core
 sphinx>=7.0
 sphinx-rtd-theme>=2.0
+sphinx-autobuild>=2024.2.4
 
 # Esbonio language server (used by the VS Code extension)
 esbonio>=2.0
