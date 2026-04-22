@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" width="1200" height="840">
+
+<defs>
+  <style>
+    text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+  </style>
+
+  <!-- Blue arrow (Linux internal flows) -->
+  <marker id="ah-b" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 1 L 9 5 L 0 9 z" fill="#4a82c8"/>
+  </marker>
+
+  <!-- Green arrow (Zephyr internal flows) -->
+  <marker id="ah-g" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 1 L 9 5 L 0 9 z" fill="#3a9858"/>
+  </marker>
+
+  <!-- Orange arrow (SPI) -->
+  <marker id="ah-spi" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M 0 1 L 9 5 L 0 9 z" fill="#d08820"/>
+  </marker>
+
+  <!-- Red arrow (IRQ GPIO) -->
+  <marker id="ah-irq" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M 0 1 L 9 5 L 0 9 z" fill="#d04040"/>
+  </marker>
+</defs>
+
+
+<!-- ================================================================ -->
+<!-- PANEL BACKGROUNDS                                                 -->
+<!-- ================================================================ -->
+
+<!-- Linux panel -->
+<rect x="8" y="8" width="534" height="824" rx="14"
+      fill="#0c1e3c" stroke="#2a5898" stroke-width="2.5"/>
+
+<!-- Physical strip -->
+<rect x="546" y="8" width="108" height="824" rx="0" fill="#0a0a0a"/>
+
+<!-- Zephyr panel -->
+<rect x="658" y="8" width="534" height="824" rx="14"
+      fill="#0c221a" stroke="#1e6030" stroke-width="2.5"/>
+
+
+<!-- ================================================================ -->
+<!-- PANEL TITLES                                                      -->
+<!-- ================================================================ -->
+
+<text x="275" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#c0d8f8">Linux Host</text>
+<text x="925" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#b0e0c0">Zephyr Device  (nRF91x1)</text>
+
+<!-- Physical strip title -->
+<text x="600" y="30" text-anchor="middle" font-size="9" fill="#444444"
+      font-weight="bold" letter-spacing="2">PHYSICAL</text>
+
+
+<!-- ================================================================ -->
+<!-- LINUX — USERSPACE AREA                                            -->
+<!-- ================================================================ -->
+
+<rect x="22" y="45" width="506" height="150" rx="8"
+      fill="#132240" stroke="#22487a" stroke-width="1" stroke-dasharray="5,3"/>
+<text x="275" y="63" text-anchor="middle" font-size="10" fill="#507898"
+      letter-spacing="3">USERSPACE</text>
+
+<!-- IPv6 Applications -->
+<rect x="32" y="70" width="225" height="112" rx="7"
+      fill="#1a4585" stroke="#3068b8" stroke-width="1.5"/>
+<text x="144" y="96"  text-anchor="middle" font-size="13" font-weight="bold" fill="#ddeeff">IPv6 Applications</text>
+<text x="144" y="114" text-anchor="middle" font-size="10" fill="#8ab2e0">POSIX socket API</text>
+<text x="144" y="130" text-anchor="middle" font-size="10" fill="#8ab2e0">ping6 · curl · custom apps</text>
+<text x="144" y="147" text-anchor="middle" font-size="9"  fill="#5a80b0">no DECT NR awareness</text>
+
+<!-- Management Tools -->
+<rect x="270" y="70" width="248" height="112" rx="7"
+      fill="#1a4585" stroke="#3068b8" stroke-width="1.5"/>
+<text x="394" y="96"  text-anchor="middle" font-size="13" font-weight="bold" fill="#ddeeff">Management Tools</text>
+<text x="394" y="114" text-anchor="middle" font-size="10" fill="#8ab2e0">ip link · ip -6 addr · ip -6 route</text>
+<text x="394" y="130" text-anchor="middle" font-size="10" fill="#8ab2e0">opener-ctl  (OPENER genl family)</text>
+<text x="394" y="147" text-anchor="middle" font-size="9"  fill="#5a80b0">stats · channel config</text>
+
+
+<!-- ================================================================ -->
+<!-- USER/KERNEL BOUNDARY                                              -->
+<!-- ================================================================ -->
+
+<line x1="28" y1="207" x2="522" y2="207"
+      stroke="#1e4070" stroke-width="1" stroke-dasharray="7,4"/>
+<text x="275" y="204" text-anchor="middle" font-size="9" fill="#406890"
+      letter-spacing="1">── ── ── user / kernel boundary ── ── ──</text>
+
+
+<!-- ================================================================ -->
+<!-- LINUX — KERNEL COMPONENTS                                         -->
+<!-- ================================================================ -->
+
+<!-- IPv6 Stack -->
+<rect x="32" y="216" width="225" height="72" rx="7"
+      fill="#103270" stroke="#2050a0" stroke-width="1.5"/>
+<text x="144" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#ddeeff">IPv6 Stack</text>
+<text x="144" y="258" text-anchor="middle" font-size="10" fill="#8ab2e0">routing · netfilter · tc</text>
+<text x="144" y="274" text-anchor="middle" font-size="9"  fill="#5a80b0">BPF · standard kernel</text>
+
+<!-- Generic Netlink -->
+<rect x="270" y="216" width="248" height="72" rx="7"
+      fill="#103270" stroke="#2050a0" stroke-width="1.5"/>
+<text x="394" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#ddeeff">Generic Netlink</text>
+<text x="394" y="258" text-anchor="middle" font-size="10" fill="#8ab2e0">family  "OPENER"</text>
+<text x="394" y="274" text-anchor="middle" font-size="9"  fill="#5a80b0">opener_netlink.c</text>
+
+<!-- net_device -->
+<rect x="32" y="308" width="506" height="90" rx="7"
+      fill="#0c2a60" stroke="#1c4890" stroke-width="2"/>
+<text x="285" y="336" text-anchor="middle" font-size="14" font-weight="bold" fill="#ddeeff">net_device  "opener0"</text>
+<text x="285" y="355" text-anchor="middle" font-size="11" fill="#8ab2e0">opener_netdev.c  ·  MTU 1280  ·  ARPHRD_NONE  ·  IFF_NOARP</text>
+<text x="152" y="377" text-anchor="middle" font-size="10" fill="#6898d0">ndo_start_xmit → TX work</text>
+<text x="418" y="377" text-anchor="middle" font-size="10" fill="#6898d0">netif_rx ← RX work</text>
+
+<!-- RPC Transport -->
+<rect x="32" y="418" width="506" height="112" rx="7"
+      fill="#08204e" stroke="#183c78" stroke-width="2"/>
+<text x="285" y="446" text-anchor="middle" font-size="14" font-weight="bold" fill="#ddeeff">RPC Transport</text>
+<text x="285" y="465" text-anchor="middle" font-size="11" fill="#8ab2e0">opener_rpc.c</text>
+<text x="120" y="485" text-anchor="middle" font-size="10" fill="#6898d0">frame_build()</text>
+<text x="285" y="485" text-anchor="middle" font-size="10" fill="#6898d0">process_frame()</text>
+<text x="452" y="485" text-anchor="middle" font-size="10" fill="#6898d0">crc16_ccitt()</text>
+<text x="152" y="506" text-anchor="middle" font-size="10" fill="#4a78b0">opener_tx_work</text>
+<text x="418" y="506" text-anchor="middle" font-size="10" fill="#4a78b0">opener_rx_work</text>
+
+<!-- SPI Master -->
+<rect x="32" y="550" width="506" height="92" rx="7"
+      fill="#061530" stroke="#122858" stroke-width="2"/>
+<text x="285" y="577" text-anchor="middle" font-size="14" font-weight="bold" fill="#ddeeff">SPI Master Driver</text>
+<text x="285" y="596" text-anchor="middle" font-size="11" fill="#8ab2e0">opener_main.c  ·  Linux SPI subsystem</text>
+<text x="144" y="617" text-anchor="middle" font-size="10" fill="#6898d0">spi_sync()</text>
+<text x="395" y="617" text-anchor="middle" font-size="10" fill="#6898d0">request_irq() → queue_work(rx)</text>
+
+<!-- Module Proxies (dashed box) -->
+<rect x="32" y="662" width="506" height="74" rx="7"
+      fill="#04101e" stroke="#183050" stroke-width="1" stroke-dasharray="5,3"/>
+<text x="285" y="683" text-anchor="middle" font-size="12" font-weight="bold" fill="#4870a0">Module Proxies  (kernel,  struct opener_&lt;m&gt;_ops)</text>
+<text x="285" y="701" text-anchor="middle" font-size="10" fill="#304868">opener_scheduler.c · opener_spectrum.c · opener_assoc.c · ...</text>
+<text x="285" y="718" text-anchor="middle" font-size="9"  fill="#243858">same struct-of-fn-ptrs interface — callers unaware of RPC transport</text>
+
+
+<!-- ================================================================ -->
+<!-- LINUX — VERTICAL ARROWS                                           -->
+<!-- ================================================================ -->
+
+<!-- IPv6 Apps → IPv6 Stack -->
+<line x1="144" y1="182" x2="144" y2="214"
+      stroke="#2c5890" stroke-width="1.5" marker-end="url(#ah-b)"/>
+
+<!-- Mgmt Tools → Genl -->
+<line x1="394" y1="182" x2="394" y2="214"
+      stroke="#2c5890" stroke-width="1.5" marker-end="url(#ah-b)"/>
+
+<!-- IPv6 Stack → net_device (data path) -->
+<line x1="144" y1="288" x2="144" y2="306"
+      stroke="#2c5890" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<text x="158" y="302" font-size="9" fill="#4068a0">sk_buff</text>
+
+<!-- Genl ⟶ RPC Transport (right-side bypass, dashed = management path) -->
+<line x1="490" y1="288" x2="490" y2="416"
+      stroke="#2c5890" stroke-width="1.5" stroke-dasharray="4,2.5" marker-end="url(#ah-b)"/>
+<text x="510" y="360" font-size="9" fill="#3860a0"
+      transform="rotate(90 510 360)">management</text>
+
+<!-- net_device → RPC Transport -->
+<line x1="200" y1="398" x2="200" y2="416"
+      stroke="#2c5890" stroke-width="1.5" marker-end="url(#ah-b)"/>
+
+<!-- RPC Transport → SPI Master -->
+<line x1="285" y1="530" x2="285" y2="548"
+      stroke="#2c5890" stroke-width="1.5" marker-end="url(#ah-b)"/>
+
+
+<!-- ================================================================ -->
+<!-- ZEPHYR — REAL MODULE IMPLEMENTATIONS                              -->
+<!-- ================================================================ -->
+
+<rect x="672" y="45" width="506" height="150" rx="8"
+      fill="#102818" stroke="#1e5028" stroke-width="1"/>
+<text x="925" y="63" text-anchor="middle" font-size="10" fill="#408858"
+      letter-spacing="2">REAL MODULE IMPLEMENTATIONS</text>
+
+<!-- Radio Scheduler -->
+<rect x="682" y="70" width="234" height="112" rx="7"
+      fill="#165830" stroke="#289050" stroke-width="1.5"/>
+<text x="799" y="96"  text-anchor="middle" font-size="13" font-weight="bold" fill="#d0f0e0">Radio Scheduler</text>
+<text x="799" y="114" text-anchor="middle" font-size="10" fill="#80d0a0">schedule_tx / schedule_rx</text>
+<text x="799" y="130" text-anchor="middle" font-size="10" fill="#80d0a0">cancel  ·  get_stats</text>
+<text x="799" y="147" text-anchor="middle" font-size="9"  fill="#509870">LBT · HARQ · priority queue</text>
+
+<!-- Other modules (dashed) -->
+<rect x="928" y="70" width="244" height="112" rx="7"
+      fill="#165830" stroke="#289050" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="1050" y="96"  text-anchor="middle" font-size="13" font-weight="bold" fill="#d0f0e0">Other Modules</text>
+<text x="1050" y="114" text-anchor="middle" font-size="10" fill="#80d0a0">Spectrum Manager</text>
+<text x="1050" y="130" text-anchor="middle" font-size="10" fill="#80d0a0">Assoc · Beacon · HARQ</text>
+<text x="1050" y="147" text-anchor="middle" font-size="9"  fill="#509870">Security · Paging · Mobility</text>
+
+
+<!-- ================================================================ -->
+<!-- ZEPHYR — MODULE RPC HANDLERS                                      -->
+<!-- ================================================================ -->
+
+<rect x="672" y="216" width="506" height="90" rx="7"
+      fill="#124820" stroke="#208040" stroke-width="2"/>
+<text x="925" y="243" text-anchor="middle" font-size="14" font-weight="bold" fill="#d0f0e0">Module RPC Handlers</text>
+<text x="925" y="262" text-anchor="middle" font-size="11" fill="#80d0a0">opener_rpc_scheduler.c  ·  opener_rpc_spectrum.c  ·  ...</text>
+<text x="925" y="282" text-anchor="middle" font-size="10" fill="#60b080">handle_schedule_tx()  ·  push_tx_complete_event()  ·  serialize / deserialize</text>
+
+
+<!-- ================================================================ -->
+<!-- ZEPHYR — RPC SERVER                                               -->
+<!-- ================================================================ -->
+
+<rect x="672" y="326" width="506" height="122" rx="7"
+      fill="#0c3818" stroke="#186030" stroke-width="2"/>
+<text x="925" y="354" text-anchor="middle" font-size="14" font-weight="bold" fill="#d0f0e0">RPC Server / Dispatch</text>
+<text x="925" y="373" text-anchor="middle" font-size="11" fill="#80d0a0">opener_rpc_server.c</text>
+<text x="800" y="393" text-anchor="middle" font-size="10" fill="#60b080">handler registry</text>
+<text x="925" y="393" text-anchor="middle" font-size="10" fill="#60b080">frame_build()</text>
+<text x="1054" y="393" text-anchor="middle" font-size="10" fill="#60b080">crc16_ccitt()</text>
+<text x="925" y="412" text-anchor="middle" font-size="10" fill="#449868">K_MSGQ_DEFINE(rpc_tx_queue,  512 B,  depth 8)</text>
+<text x="925" y="430" text-anchor="middle" font-size="10" fill="#449868">K_THREAD_DEFINE(rpc_server)  ·  gpio_pin_set_dt(irq) on enqueue</text>
+
+
+<!-- ================================================================ -->
+<!-- ZEPHYR — SPI SLAVE                                                -->
+<!-- ================================================================ -->
+
+<rect x="672" y="468" width="506" height="92" rx="7"
+      fill="#082a12" stroke="#105028" stroke-width="2"/>
+<text x="925" y="496" text-anchor="middle" font-size="14" font-weight="bold" fill="#d0f0e0">SPI Slave Driver</text>
+<text x="925" y="515" text-anchor="middle" font-size="11" fill="#80d0a0">Zephyr SPI subsystem  ·  CONFIG_SPI_SLAVE</text>
+<text x="800" y="535" text-anchor="middle" font-size="10" fill="#60b080">spi_transceive()  512 B</text>
+<text x="1050" y="535" text-anchor="middle" font-size="10" fill="#60b080">full-duplex TX+RX buffer</text>
+
+<!-- IRQ GPIO note -->
+<rect x="672" y="580" width="506" height="62" rx="7"
+      fill="#040e08" stroke="#0e3a18" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="925" y="601" text-anchor="middle" font-size="11" font-weight="bold" fill="#409858">IRQ GPIO  (active high, output)</text>
+<text x="925" y="619" text-anchor="middle" font-size="10" fill="#2a6838">gpio_pin_set_dt(1) on enqueue  ·  gpio_pin_set_dt(0) when queue drained</text>
+
+
+<!-- ================================================================ -->
+<!-- ZEPHYR — VERTICAL ARROWS                                          -->
+<!-- ================================================================ -->
+
+<!-- Real modules → RPC Handlers -->
+<line x1="799" y1="182" x2="799" y2="214"
+      stroke="#289048" stroke-width="1.5" marker-end="url(#ah-g)"/>
+
+<!-- RPC Handlers → RPC Server -->
+<line x1="925" y1="306" x2="925" y2="324"
+      stroke="#289048" stroke-width="1.5" marker-end="url(#ah-g)"/>
+
+<!-- RPC Server → SPI Slave -->
+<line x1="925" y1="448" x2="925" y2="466"
+      stroke="#289048" stroke-width="1.5" marker-end="url(#ah-g)"/>
+
+<!-- SPI Slave → IRQ GPIO -->
+<line x1="925" y1="560" x2="925" y2="578"
+      stroke="#289048" stroke-width="1.5" marker-end="url(#ah-g)"/>
+
+
+<!-- ================================================================ -->
+<!-- PHYSICAL BUS CONNECTIONS                                          -->
+<!-- ================================================================ -->
+
+<!--
+  Key y-positions:
+    Linux SPI Master box:  y=550..642   → right-edge center: (538, 596)
+    Zephyr SPI Slave box:  y=468..560   → left-edge  center: (672, 514)
+    IRQ GPIO note:         y=580..642   → left-edge  center: (672, 611)
+
+  SPI TX (Linux → Device):  (538,588) → bent at x=562 → (672,506)
+  SPI RX (Device → Linux):  (672,522) → bent at x=562 → (538,604)
+  IRQ   (Device → Linux):   (672,611) → bent at x=562 → (538,630)
+-->
+
+<!-- SPI TX: Linux → Zephyr (upper orange line) -->
+<path d="M 538 588 H 562 V 506 H 672"
+      fill="none" stroke="#c07818" stroke-width="2.5"
+      marker-end="url(#ah-spi)"/>
+
+<!-- SPI RX: Zephyr → Linux (lower orange line) -->
+<path d="M 672 522 H 562 V 604 H 538"
+      fill="none" stroke="#c07818" stroke-width="2.5"
+      marker-end="url(#ah-spi)"/>
+
+<!-- IRQ GPIO: Zephyr → Linux (red line) -->
+<path d="M 672 611 H 562 V 630 H 538"
+      fill="none" stroke="#b83030" stroke-width="2.5"
+      marker-end="url(#ah-irq)"/>
+
+<!-- SPI label block in the physical strip -->
+<text x="600" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#c07818">SPI  8 MHz</text>
+<text x="600" y="496" text-anchor="middle" font-size="9"  fill="#806018">CPOL=0  CPHA=0  MSB-first</text>
+<text x="600" y="512" text-anchor="middle" font-size="9"  fill="#806018">MOSI · MISO · SCLK · CS</text>
+<text x="600" y="528" text-anchor="middle" font-size="9"  fill="#806018">512 B/frame · full-duplex</text>
+
+<!-- Separator tick between SPI and IRQ labels -->
+<line x1="556" y1="538" x2="644" y2="538" stroke="#2a2a2a" stroke-width="1"/>
+
+<!-- IRQ label in the physical strip -->
+<text x="600" y="556" text-anchor="middle" font-size="11" font-weight="bold" fill="#b83030">IRQ GPIO</text>
+<text x="600" y="572" text-anchor="middle" font-size="9"  fill="#783030">active high · rising edge</text>
+<text x="600" y="588" text-anchor="middle" font-size="9"  fill="#783030">asserted by device</text>
+
+
+<!-- ================================================================ -->
+<!-- LEGEND                                                            -->
+<!-- ================================================================ -->
+
+<rect x="22" y="754" width="506" height="68" rx="6"
+      fill="#060e1c" stroke="#1a3050" stroke-width="1"/>
+<text x="275" y="771" text-anchor="middle" font-size="10" font-weight="bold" fill="#607090">LEGEND</text>
+
+<!-- Data path arrow -->
+<line x1="40"  y1="788" x2="80"  y2="788"
+      stroke="#4a82c8" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<text x="88" y="792" font-size="9" fill="#607090">Data path  (sk_buff)</text>
+
+<!-- Management path arrow (dashed) -->
+<line x1="205" y1="788" x2="245" y2="788"
+      stroke="#4a82c8" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ah-b)"/>
+<text x="253" y="792" font-size="9" fill="#607090">Management / RPC call</text>
+
+<!-- SPI arrow -->
+<line x1="380" y1="788" x2="420" y2="788"
+      stroke="#c07818" stroke-width="2.5" marker-end="url(#ah-spi)"/>
+<text x="428" y="792" font-size="9" fill="#607090">SPI frame</text>
+
+<!-- IRQ arrow -->
+<line x1="490" y1="788" x2="520" y2="788"
+      stroke="#b83030" stroke-width="2" marker-end="url(#ah-irq)"/>
+<text x="528" y="792" font-size="9" fill="#607090">IRQ</text>
+
+<!-- Dashed box legend -->
+<rect x="40" y="800" width="40" height="15" rx="3"
+      fill="none" stroke="#607090" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="88" y="812" font-size="9" fill="#607090">Optional / pluggable component</text>
+
+<!-- Zephyr legend repeat -->
+<rect x="672" y="754" width="506" height="68" rx="6"
+      fill="#04100a" stroke="#183028" stroke-width="1"/>
+<text x="925" y="771" text-anchor="middle" font-size="10" font-weight="bold" fill="#407060">FRAME FORMAT  (512 bytes, fixed)</text>
+<text x="925" y="788" text-anchor="middle" font-size="9" fill="#407060">[ MAGIC 1B ][ FLAGS 1B ][ MOD_ID 1B ][ PROC_ID 1B ][ SEQ 2B BE ][ PLEN 2B BE ]</text>
+<text x="925" y="803" text-anchor="middle" font-size="9" fill="#407060">[ PAYLOAD up to 502 B ][ CRC-16/CCITT 2B ][ zero-pad to 512 B ]</text>
+<text x="925" y="817" text-anchor="middle" font-size="9" fill="#2a5040">MAGIC=0xDE for data  ·  MAGIC=0x00 for NOOP  ·  FLAGS: RESPONSE | EVENT | ERROR</text>
+
+</svg>
