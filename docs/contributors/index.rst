@@ -7,4 +7,6 @@ At this chapter we will collect all ideas of the contributors.
    :maxdepth: 2
 
    deveritec/index
+   codium/index
+   ostfalia/index
 

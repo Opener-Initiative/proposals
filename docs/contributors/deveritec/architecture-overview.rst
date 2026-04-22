@@ -110,8 +110,6 @@ DECT NR+ API Overview
     *   A common POSIX socket interface to allow the user/application to provide data towards the stack (tx) and receive data from remote devices (rx).    
 
 
-DECT NR+ Driver API
-^^^^^^^^^^^^^^^^^^^^^^
 .. toctree::
    :maxdepth: 2
 
