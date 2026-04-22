@@ -1,0 +1,14 @@
+.wy-nav-content      { max-width: none !important; width: auto !important; }
+.wy-nav-content-wrap { max-width: none !important; }
+.rst-content         { max-width: none !important; }
+
+.rst-content table.docutils {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.85em;
+}
+ 
+.rst-content p, .rst-content li, .rst-content dd {
+    white-space: normal;
+}

@@ -1,7 +1,7 @@
 .. _test-cases:
 
 Conformance Test
-##########################################
+################
 
 The Conformance Test Specification – Part 2: Radio Protocols (`ETSI TS 104 047-2 V1.1.1 (2025-10) <https://www.etsi.org/deliver/etsi_ts/104000_104099/10404702/01.01.01_60/ts_10404702v010101p.pdf>`_) discribes in chapter A3.1 the following test system configurations:
 

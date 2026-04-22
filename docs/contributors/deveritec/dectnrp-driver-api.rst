@@ -1,20 +1,19 @@
 ..  dectnrp-driver-api:
 
-=======
-Preface
-=======
+DECT NR + Driver API
+====================
 
-This document acts as an starting point to document the DECT NR+ Driver API. 
-It is work in progress and first collects some ideas.
-The terms radio and modem in this context are used synonymously.
+.. note::
+  This document acts as an starting point to document the DECT NR+ Driver API. 
+  It is work in progress and first collects some ideas.
+  The terms radio and modem in this context are used synonymously.
 
-Following proposal is intended for integration into Zephyr net-stack architecture `Network Stack Architecture
-<https://github.com/zephyrproject-rtos/zephyr/blob/v4.2-branch/doc/connectivity/networking/net-stack-architecture.rst>`_ 
-but may be also used in an Zephyr independent OS environment.
+  Following proposal is intended for integration into Zephyr net-stack architecture `Network Stack Architecture
+  <https://github.com/zephyrproject-rtos/zephyr/blob/v4.2-branch/doc/connectivity/networking/net-stack-architecture.rst>`_ 
+  but may be also used in an Zephyr independent OS environment.
 
-========
 Overview
-========
+--------
 
 The DECT NR+ Driver API is a common interface between DECT NR+ Stack (in particular the Scheduler dectnrp_sdlr) and the Driver (dectnrp_driver).
 
@@ -27,9 +26,8 @@ This interface
 *   dispatches so called Driver Operations (RX, TX, RSSI1) between scheduler and driver.
 *   notifies events from driver up to the stack.
 
-====================
 DECT NR + Driver API
-====================
+--------------------
 
 This proposal is based on the public driver API of IEEE 802.15.4 implemented in Zephyr 
 `Public IEEE 802.15.4 Driver API

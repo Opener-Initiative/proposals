@@ -1,26 +1,22 @@
 ..  architecture-overview:
 
-=======
-Preface
-=======
-
-This document acts as an starting point to document DECT NR+ Stack. 
-It is work in progress and first collects some ideas.
-
-Following proposal is intended for integration into Zephyr net-stack architecture `Network Stack Architecture
-<https://github.com/zephyrproject-rtos/zephyr/blob/v4.2-branch/doc/connectivity/networking/net-stack-architecture.rst>`_ 
-but may be also used in an Zephyr independent environment.
-
-
-============
 Architecture
 ============
 
+.. note::
+    This document acts as an starting point to document DECT NR+ Stack. 
+    It is work in progress and first collects some ideas.
+
+    Following proposal is intended for integration into Zephyr net-stack architecture `Network Stack Architecture
+    <https://github.com/zephyrproject-rtos/zephyr/blob/v4.2-branch/doc/connectivity/networking/net-stack-architecture.rst>`_ 
+    but may be also used in an Zephyr independent environment.
+
+
 .. image:: architecture-overview.svg
 
-----------------------
+
 Modules
-----------------------
+-------
 
 *   Driver(s)
 
@@ -83,11 +79,9 @@ Modules
 
     *   A common POSIX conform socket implementation to allow the user/application to communicate with the application.
 
--------------
 API Reference
 -------------
 
-^^^^^^^^^^^^^^^^^^^^^
 DECT NR+ API Overview
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -116,8 +110,9 @@ DECT NR+ API Overview
     *   A common POSIX socket interface to allow the user/application to provide data towards the stack (tx) and receive data from remote devices (rx).    
 
 
-^^^^^^^^^^^^^^^^^^^^^^
 DECT NR+ Driver API
 ^^^^^^^^^^^^^^^^^^^^^^
+.. toctree::
+   :maxdepth: 2
 
-`dectnrp-driver-api <dectnrp-driver-api.rst>`_.
+   dectnrp-driver-api
