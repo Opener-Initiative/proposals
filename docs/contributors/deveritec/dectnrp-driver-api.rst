@@ -1,7 +1,7 @@
 ..  dectnrp-driver-api:
 
 DECT NR + Driver API
-====================
+********************
 
 .. note::
   This document acts as an starting point to document the DECT NR+ Driver API. 
@@ -13,7 +13,7 @@ DECT NR + Driver API
   but may be also used in an Zephyr independent OS environment.
 
 Overview
---------
+========
 
 The DECT NR+ Driver API is a common interface between DECT NR+ Stack (in particular the Scheduler dectnrp_sdlr) and the Driver (dectnrp_driver).
 
@@ -27,7 +27,7 @@ This interface
 *   notifies events from driver up to the stack.
 
 DECT NR + Driver API
---------------------
+====================
 
 This proposal is based on the public driver API of IEEE 802.15.4 implemented in Zephyr 
 `Public IEEE 802.15.4 Driver API
@@ -45,12 +45,15 @@ The scheduling API may come in two flavours which can be activated at build time
   For blocking operations the channel gets set with a dedicated function.
 
 
+Hardcoded build-time parameters
+-------------------------------
 
+To provide hardcoded build-time parameters and/or also fix driver limitations from the driver up to the stack 
+we may utilze the `Kconfig <https://docs.zephyrproject.org/latest/build/kconfig/index.html>`_ configuration system provided by Zephyr.
+That kconfig options are then integral part of the DECT NR + Driver API.
+An first example is proposed in the file `Kconfig.radio <src/Kconfig.radio>`_ . It splits up into two menus:
 
-
-
-
- 
-
+* `DECTNRP Radio capabilities interface` in which the driver sets its limits and hardcoded build-time parameters. 
+* `DECTNRP Radio control interface` in which the driver itself gets controlled and setup from 'above'.
 
 

@@ -1,12 +1,18 @@
 /*
- * This file contains pseudo code for demonstration purposes.
- * Definitions may be missing and in that case are only place 
- * holders for types representing related objects.
+ * Copyright (c) 2026 Deveritec GmbH.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * 
  */
 
 /**
  * @file
  * @brief Public DECT NR+ Radio Driver API
+ * 
+ * @attention This file contains pseudo code for demonstration purposes.
+ * Definitions may be missing and in that case are only place 
+ * holders for types representing related objects.
  */
 
 #ifndef DECTNRP_DRIVER_H_
