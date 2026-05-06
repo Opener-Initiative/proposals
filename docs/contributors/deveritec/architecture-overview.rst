@@ -107,11 +107,11 @@ API Reference
 DECT NR+ API Overview
 ^^^^^^^^^^^^^^^^^^^^^
 
-*   Driver API `dectnrp-driver-api.rst <dectnrp-driver-api.rst>`_ 
+*   :doc:`dectnrp-driver-api`
 
     *   The common interface between `DECT NR+ Scheduler` and `DECT NR+ Driver`.
     *   This interface dispatches so called Driver Operations (RX, TX, RSSI1) between scheduler and driver.
-*   Scheduler API  `dectnrp-sdl-api.rst <dectnrp-driver-sdl.rst>`_ 
+*   :doc:`dectnrp-sdlr-api`
 
     *   A common interface for different scheduler implementations.
     *   Provides an interface for the Core Module to manage the scheduler and callbacks where scheduler can notify the core.
@@ -130,3 +130,11 @@ DECT NR+ API Overview
 *   Socket API
 
     *   A common POSIX socket interface to allow the user/application to provide data towards the stack (tx) and receive data from remote devices (rx).    
+
+
+.. toctree::
+    :hidden:
+    :maxdepth: 2
+
+    dectnrp-driver-api
+    dectnrp-sdlr-api
