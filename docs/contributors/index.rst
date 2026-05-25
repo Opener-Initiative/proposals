@@ -9,4 +9,5 @@ At this chapter we will collect all ideas of the contributors.
    deveritec/index
    codium/index
    ostfalia/index
+   hophop/index
 
