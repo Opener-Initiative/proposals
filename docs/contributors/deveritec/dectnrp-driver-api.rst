@@ -1,7 +1,7 @@
 ..  dectnrp-driver-api:
 
-DECT NR + Driver API
-********************
+DECT NR+ Driver API
+*******************
 
 .. note::
   This document acts as an starting point to document the DECT NR+ Driver API. 
@@ -26,15 +26,15 @@ This interface
 *   dispatches so called Driver Operations (RX, TX, RSSI1) between scheduler and driver.
 *   notifies events from driver up to the stack.
 
-DECT NR + Driver API
-====================
+DECT NR+ Driver API
+===================
 
 This proposal is based on the public driver API of IEEE 802.15.4 implemented in Zephyr 
 `Public IEEE 802.15.4 Driver API
 <https://github.com/zephyrproject-rtos/zephyr/blob/v4.2-branch/include/zephyr/net/ieee802154_radio.h>`_. 
 It has been stripped of all IEEE 802.15.4 specific stuff and DECT NR+ specific (scheduling) features has been added.
 
-In the header file `dectnrp_driver_api.h <include/dectnrp_driver_api.h>`_ a first 
+In the header file :doc:`dectnrp_driver_api.h <include/dectnrp_driver_api>` a first
 implementation for demonstration purposes is provided. 
 
 The scheduling API may come in two flavours which can be activated at build time:
@@ -49,9 +49,9 @@ Hardcoded build-time parameters
 -------------------------------
 
 To provide hardcoded build-time parameters and/or also fix driver limitations from the driver up to the stack 
-we may utilze the `Kconfig <https://docs.zephyrproject.org/latest/build/kconfig/index.html>`_ configuration system provided by Zephyr.
+we may utilize the `Kconfig <https://docs.zephyrproject.org/latest/build/kconfig/index.html>`_ configuration system provided by Zephyr.
 That kconfig options are then integral part of the DECT NR + Driver API.
-An first example is proposed in the file `Kconfig.radio <src/Kconfig.radio>`_ . It splits up into two menus:
+An first example is proposed in the file :doc:`Kconfig.radio <src/Kconfig.radio>`. It splits up into two menus:
 
 * `DECTNRP Radio capabilities interface` in which the driver sets its limits and hardcoded build-time parameters. 
 * `DECTNRP Radio control interface` in which the driver itself gets controlled and setup from 'above'.

@@ -1,7 +1,7 @@
 ..  dectnrp-sdlr-api:
 
-DECT NR + Scheduler API
-***********************
+DECT NR+ Scheduler API
+**********************
 
 .. note::
   This document acts as an starting point to document the DECT NR+ Scheduler API. 
@@ -26,8 +26,8 @@ This interface
 *   dispatches received un-decoded messages and RSSI1 results up to the stack (MAC/control).
 *   notifies events from scheduler up to the stack.
 
-DECT NR + Scheduler API
-=======================
+DECT NR+ Scheduler API
+======================
 
-In the header file `dectnrp_sdlr_api.h <include/dectnrp_sdlr_api.h>`_ a first 
+In the header file :doc:`dectnrp_sdlr_api.h <include/dectnrp_sdlr_api>` a first
 implementation for demonstration purposes is provided. 
