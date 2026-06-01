@@ -1,6 +1,9 @@
-# *Opener* Specification
+# Proposals
 
-This repository contains functional and technical specification documents of the Opener Initiative's DECT-2020 NR (DECT NR+) protocol stack implementation. To propose features and requirements to be included in the *Opener* specification, create a pull request and reference [issue #1](https://github.com/Opener-Initiative/specification/issues/1).
+> [!IMPORTANT]
+> This repository is in a draft state and is currently a space for collecting input documents for the *Opener* stack implementation. It is inappropriate to use it as reference material or to cite it other than as "work in progress."
+
+This repository is where ideas and proposals for the Opener Initiative's DECT-2020 NR (DECT NR+) protocol stack implementation are put forward, discussed, and refined. The implementation and its documentation are maintained separately.
 
 ## 🚀 Build Locally
 
@@ -17,10 +20,10 @@ make html
 
 ## ✍️ Contributing
 
-1. create a feature branch.
+1. Create a feature branch.
 2. Add or edit `.rst` files in the appropriate `docs/` subfolder.
 3. Register new files in the nearest `toctree` directive.
-4. Open a pull request referencing issue #1.
+4. Open a pull request referencing [issue #1](https://github.com/Opener-Initiative/proposals/issues/1). Discussion happens in the pull request and any linked issues.
 
 ## 🔧 CI / CD
 
