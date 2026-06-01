@@ -4,24 +4,20 @@ Introduction
 Purpose
 -------
 
-This document describes the **Opener Specification** for the DECT-2020 NR (DECT NR+)
-protocol stack implementation developed by the Opener Initiative.
-
-The specification defines the functional and technical requirements that all
-conformant implementations of the Opener protocol stack must satisfy.
+In this repository we collect proposals for Opener, the Opener Initiative's open NR+ reference implementation covering the MAC and upper layers.
 
 Scope
 -----
 
-This specification covers the following areas:
+Proposals cover the following areas:
 
 * Medium Access Control (MAC) layer
 * Data Link Control (DLC) layer
 * Network layer signalling
 * Management and control interfaces
 
-ETSI DECT-2020 Specification
-----------------------------
+ETSI DECT-2020 NR Technical Specification
+-----------------------------------------
 
 .. list-table:: Specification Documents
    :widths: 20 50 30
@@ -37,22 +33,22 @@ ETSI DECT-2020 Specification
      - `Part 2: Radio aspects <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363602/02.01.01_60/ts_10363602v020101p.pdf>`_
      - 2.1.1
    * - ETSI TS 103 636-3
-     - `Part 3: MAC layer <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363603/02.01.01_60/ts_10363603v020101p.pdf>`_
+     - `Part 3: Physical (PHY) layer <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363603/02.01.01_60/ts_10363603v020101p.pdf>`_
      - 2.1.1
    * - ETSI TS 103 636-4
-     - `Part 4: Data Link Control layer <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363604/02.01.01_60/ts_10363604v020101p.pdf>`_
+     - `Part 4: Medium Access Control (MAC) layer <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363604/02.01.01_60/ts_10363604v020101p.pdf>`_
      - 2.1.1
    * - ETSI TS 103 636-5
-     - `Part 5: Network layer <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363605/02.02.01_60/ts_10363605v020201p.pdf>`_
+     - `Part 5: Data Link Control (DLC) and Convergence (CVG) layers <https://www.etsi.org/deliver/etsi_ts/103600_103699/10363605/02.02.01_60/ts_10363605v020201p.pdf>`_
      - 2.1.1
 
 Definitions and Abbreviations
-------------------------------
+-----------------------------
 
 .. glossary::
 
    DECT NR+
-      DECT-2020 New Radio. A standard for wireless communication
+      DECT-2020 New Radio (NR). A standard for wireless communication
       defined by ETSI in TS 103 636.
 
    DLC
@@ -80,4 +76,4 @@ Definitions and Abbreviations
       Received Signal Strength Indicator.
 
 .. todo::
-   Add further abbreviations as the specification grows.
+   Add further abbreviations as the content grows.

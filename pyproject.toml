@@ -1,7 +1,7 @@
 [project]
-name = "opender-specification"
-version = "0.1.0"
-description = "This repository contains functional and technical specification documents of the Opener Initiative's **DECT-2020 NR (DECT NR+)** protocol stack implementation."
+name = "opener-proposals"
+version = "0.0.1"
+description = "This repository contains ideas and proposals for the Opener Initiative's DECT-2020 NR (DECT NR+) protocol stack implementation."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

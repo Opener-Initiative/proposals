@@ -2,8 +2,8 @@
 
 
 # -- Project information -------------------------------------------------------
-project = "Opener Specification"
-copyright = "2025, Opener Initiative"
+project = "Opener Proposals"
+copyright = "2026, Opener Initiative"
 author = "Opener Initiative"
 release = "0.0.1"
 
