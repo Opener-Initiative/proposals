@@ -1,13 +1,13 @@
 Contributors
 ============
 
-At this chapter we will collect all ideas of the contributors.
+In this chapter we will collect the ideas and proposals of the contributors.
 
 .. toctree::
    :maxdepth: 2
 
-   deveritec/index
    codium/index
-   ostfalia/index
+   deveritec/index
    hophop/index
+   ostfalia/index
 
